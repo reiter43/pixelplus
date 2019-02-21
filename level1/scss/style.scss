@@ -1,0 +1,98 @@
+@import '_mixsins.scss';
+@import url('_normalize.css');
+
+$fc1: #ffffff;
+$fc2: #777777;
+$fc3: #999999;
+$bgc1: #777777;
+$bgc2: #515151;
+
+/*=============================================
+      ОБЩИЕ ПРАВИЛА
+  ============================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  @include clearfix;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+body {
+  margin: 0;
+  padding: 25px 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p,
+ul {
+  margin: 0;
+}
+/*============================================= */
+
+
+/*=============================================
+        ШАПКА
+  ============================================= */
+// .header{
+//   min-height: 108px;
+// }
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  max-height: 108px;
+  height: 100%;
+}
+
+.navigation,
+.contact,
+.logo {
+  background-color: $bgc1;
+}
+
+.navigation {
+  width: 28%;
+}
+
+.contact {
+  width: 52%;
+  text-align: right;
+  padding: 20px 0;
+
+  &__list {
+    list-style-type: none;
+    margin-right: 20px;
+    padding-left: 0;
+  }
+
+  &__item:first-child>a {
+    text-decoration: none;
+  }
+
+  &__link {
+    color: $fc1;
+  }
+}
+
+.logo {
+  width: 15%;
+
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
